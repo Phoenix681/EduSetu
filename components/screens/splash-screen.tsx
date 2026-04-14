@@ -1,6 +1,6 @@
 "use client"
 
-import { GraduationCap } from "lucide-react"
+import Image from "next/image"
 
 interface SplashScreenProps {
   onComplete: () => void
@@ -21,14 +21,10 @@ export function SplashScreen({ onComplete }: SplashScreenProps) {
       
       {/* Logo */}
       <div className="relative z-10 flex flex-col items-center">
-        <div className="w-24 h-24 flex items-center justify-center">
-          <GraduationCap className="w-20 h-20 text-[#FD3667]" strokeWidth={1.5} />
+        <div className="w-32 h-32 flex items-center justify-center">
+          <Image src="/icon.png" alt="EduSetu Logo" width={128} height={128} />
         </div>
-        <span className="text-[#FD3667] text-2xl font-semibold mt-4 tracking-wide">EduSetu</span>
       </div>
-      
-      {/* Tap to continue hint */}
-      <p className="absolute bottom-20 text-white/60 text-sm">Tap to continue</p>
     </div>
   )
 }

@@ -25,28 +25,40 @@ export function AcademicYearScreen({ onBack, onUpdate }: AcademicYearScreenProps
           <button onClick={onBack} className="text-white">
             <ArrowLeft className="w-6 h-6" />
           </button>
-          <h1 className="text-white font-semibold text-lg">Select Academic Year</h1>
+          <h1 className="text-white font-light text-lg">Select Academic Year</h1>
         </div>
       </div>
 
       {/* Content */}
-      <div className="flex-1 overflow-auto px-4 py-6">
-        <div className="space-y-4">
+      <div className="flex-1 overflow-auto">
+        <div className="divide-y divide-gray-100">
           {years.map((year) => (
             <button
               key={year.id}
               onClick={() => setSelectedYear(year.id)}
-              className="w-full flex items-center justify-between py-3"
+              className="w-full flex items-center justify-between py-4 px-4"
             >
-              <div className="flex items-center gap-3">
-                <div className={`w-6 h-6 rounded-full border-2 flex items-center justify-center ${
-                  selectedYear === year.id 
-                    ? "bg-[#00C853] border-[#00C853]" 
-                    : "border-gray-300"
-                }`}>
-                  {selectedYear === year.id && <Check className="w-4 h-4 text-white" />}
+              <div className="flex items-center gap-4">
+                <div
+                  className={`w-6 h-6 rounded-full border-2 flex items-center justify-center transition-colors ${
+                    selectedYear === year.id
+                      ? "bg-[#4A4A9E] border-[#4A4A9E]"
+                      : "border-[#707070]"
+                  }`}
+                >
+                  {selectedYear === year.id && (
+                    <Check className="w-4 h-4 text-white" />
+                  )}
                 </div>
-                <span className="text-gray-800 font-medium">{year.label}</span>
+                <span
+                  className={`font-semibold ${
+                    selectedYear === year.id
+                      ? "text-[#000000]"
+                      : "text-[#000000]"
+                  }`}
+                >
+                  {year.label}
+                </span>
               </div>
             </button>
           ))}

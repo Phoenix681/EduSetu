@@ -17,22 +17,22 @@ const notices = [
     id: 1,
     title: "School is going for vacation in next month",
     date: "02 May 2026",
-    image: "/images/notice-vacation.jpg",
-    bgColor: "bg-[#E8F5E9]"
+    image: "/School is going for vacation in next month.png",
+    bgColor: "bg-[#D4FFEA]"
   },
   {
     id: 2,
     title: "Summer Book Fair at School Campus in June",
     date: "19 June 2026",
-    image: "/images/notice-bookfair.jpg",
-    bgColor: "bg-[#E3F2FD]"
+    image: "/Summer Book Fair at School Campus in June.png",
+    bgColor: "bg-[#D4F5FF]"
   },
   {
     id: 3,
-    title: "School is going for vacation in next month",
+    title: "Classes Resume After Summer Break",
     date: "06 May 2026",
-    image: "/images/notice-vacation.jpg",
-    bgColor: "bg-[#FFF3E0]"
+    image: "/Classes Resume After Summer Break.png",
+    bgColor: "bg-[#FFD4D4]"
   }
 ]
 
@@ -120,7 +120,7 @@ export function DashboardScreen({ userName, userClass, onMenuOpen, onNavigateToH
         {/* Notice Board */}
         <button 
           onClick={onNavigateToNoticeBoard}
-          className="text-[#473F97] font-light text-lg mb-3 text-left"
+          className="text-[#473F97] font-semibold text-lg mb-3 text-left"
         >
           Notice Board
         </button>
@@ -131,19 +131,19 @@ export function DashboardScreen({ userName, userClass, onMenuOpen, onNavigateToH
               onClick={onNavigateToNoticeBoard}
               className={`flex-shrink-0 w-36 ${notice.bgColor} rounded-xl p-3 text-left`}
             >
-              <div className="w-full h-16 rounded-lg overflow-hidden mb-2">
+              <div className="w-full h-15 rounded-lg overflow-hidden">
                 <Image
                   src={notice.image}
                   alt={notice.title}
-                  width={128}
-                  height={64}
-                  className="w-full h-full object-cover"
+                  width={60}
+                  height={55}
+                  className="object-contain"
                 />
               </div>
-              <p className="text-xs font-medium text-[#000000] leading-tight mb-1">
+              <p className="font-medium text-[14px] text-[#000000] leading-tight mb-1">
                 {notice.title}
               </p>
-              <p className="text-xs text-[#a2a0a0] ">{notice.date}</p>
+              <p className="text-[12px] text-[#a2a0a0] ">{notice.date}</p>
             </button>
           ))}
         </div>

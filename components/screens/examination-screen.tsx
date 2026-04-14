@@ -99,7 +99,7 @@ export function ExaminationScreen({ onBack }: ExaminationScreenProps) {
               <button onClick={() => setView("list")} className="text-white">
                 <ArrowLeft className="w-6 h-6" />
               </button>
-              <h1 className="text-white font-semibold text-lg">General Knowledge...</h1>
+              <h1 className="text-white font-light text-lg">General Knowledge...</h1>
             </div>
             <span className="text-white text-sm font-medium">1/30</span>
           </div>
@@ -124,8 +124,8 @@ export function ExaminationScreen({ onBack }: ExaminationScreenProps) {
               </h3>
 
               {/* Question text card */}
-              <div className="bg-[#F2F2F2] rounded-xl px-4 py-3 mb-4">
-                <p className="text-gray-700 text-sm leading-relaxed">{q.question}</p>
+              <div className="bg-[#E8EAEC] rounded-xl px-4 py-3 mb-4">
+                <p className="text-[#000000] text-sm leading-relaxed">{q.question}</p>
               </div>
 
               {/* Options — plain radio rows */}
@@ -150,7 +150,7 @@ export function ExaminationScreen({ onBack }: ExaminationScreenProps) {
                           <div className="w-2.5 h-2.5 rounded-full bg-[#4A4A9E]" />
                         )}
                       </div>
-                      <span className="text-gray-700 text-sm">{option}</span>
+                      <span className="text[#000000] text-sm">{option}</span>
                     </button>
                   )
                 })}
@@ -184,13 +184,13 @@ export function ExaminationScreen({ onBack }: ExaminationScreenProps) {
           <button onClick={onBack} className="text-white">
             <ArrowLeft className="w-6 h-6" />
           </button>
-          <h1 className="text-white font-semibold text-lg">Home Tests</h1>
+          <h1 className="text-white font-light text-lg">Home Tests</h1>
         </div>
       </div>
 
       {/* Content */}
       <div className="flex-1 overflow-auto px-4 py-4">
-        <h2 className="text-[#4A4A9E] font-semibold mb-4">Examination List</h2>
+        <h2 className="text-[#4A4A9E] font-medium mb-4">Examination List</h2>
 
         <div className="space-y-3">
           {exams.map((exam) => (
